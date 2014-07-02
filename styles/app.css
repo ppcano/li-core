@@ -1,3 +1,5 @@
-.app {
-  background: red;
+
+.test-row {
+  display: block;
+  margin-bottom: 1rem;
 }

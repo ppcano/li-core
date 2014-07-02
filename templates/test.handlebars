@@ -7,9 +7,19 @@
     {{#each test in model}}
       {{#with test}}
         
-      {{#link-to 'test.result' test class="test"}}
-          <div class="test-id">{{id}}</div>
-          <div class="test-name">{{title}}</div>
+      {{#link-to 'test.result' test class="test-row"}}
+          <div class="test-id test-cell">
+            {{id}}
+          </div>
+          <div class="test-name test-cell">
+            {{title}}
+          </div>
+          <div class="test-start-date test-cell">
+            {{format-date started format='Do MMM YY'}}
+          </div>
+          <div class="test-start-time test-cell">
+            {{format-date started format='HH:mm'}}
+          </div>
       {{/link-to}}
 
       {{/with}}
@@ -18,8 +28,9 @@
 
 {{else}}
 
-  You have not yet run any tests.
-  <div class="button-run">Run a new Test</div>
+  <div class="message is-warning">You have not yet run any tests.</div>
+  
+  <div class="call-action">Run a new Test</div>
 
 {{/if}}
 
