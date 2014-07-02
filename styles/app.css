@@ -1,10 +1,35 @@
+/* TODO: reorder content by splitting CSS files based on view
+ structure */
 
-.test-row {
-  display: block;
-  margin-bottom: 1rem;
+
+/* Routes */
+
+/* -- Test */
+.test-list {
+  
+
+  width: 100%;
+
+  border: 1px solid black;
+
+  margin-top: 1rem;
+
 }
 
 
+a.test-row {
+  display: block;
+  margin-bottom: 1rem;
+  clear: both; /* cause of cell float */
+}
+
+.test-cell {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+/* -- TestResult */
 .result-view {
   position: absolute;
   left: 0;
@@ -19,7 +44,7 @@
 
 
 }
-
+/* -- components */
 .line-bar-chart {
   
   position: absolute;
@@ -28,3 +53,4 @@
   background-color: white;
 
 }
+
