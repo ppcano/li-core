@@ -6,11 +6,11 @@
 
     {{#each test in model}}
       {{#with test}}
-
-        <div class="test"> 
+        
+      {{#link-to 'test.result' test class="test"}}
           <div class="test-id">{{id}}</div>
           <div class="test-name">{{title}}</div>
-        </div>
+      {{/link-to}}
 
       {{/with}}
     {{/each}}
@@ -22,4 +22,7 @@
   <div class="button-run">Run a new Test</div>
 
 {{/if}}
+
+
+{{outlet}}
 

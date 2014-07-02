@@ -17,10 +17,10 @@ define('ember', [], function() {
   optionals.forEach(function(packageName) {
 
     if (Ember.__loader.registry[packageName]) {
-      console.log('loading: '+ packageName);
+      //console.log('loading: '+ packageName);
       require(packageName);
     } else {
-      console.log('not loading: '+ packageName);
+      //console.log('not loading: '+ packageName);
     }
 
   });
